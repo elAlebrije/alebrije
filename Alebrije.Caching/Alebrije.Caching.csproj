@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Alebrije.Caching</PackageId>
+    <Product>Alebrije.Caching</Product>
+    <Authors>JJ Antonio Franco</Authors>
+    <Company>alebrije.dev</Company>
+    <Description>Caching implementations for C#</Description>
+    <Copyright>alebrije.dev</Copyright>
+    <PackageProjectUrl>https://www.alebrije.dev</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/elAlebrije/alebrije</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>C#</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

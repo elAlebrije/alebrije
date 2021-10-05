@@ -3,9 +3,10 @@ using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 using Alebrije.Abstractions.Background;
+using Alebrije.Extensions;
 using Microsoft.Extensions.Logging;
 
-namespace Alebrije.Framework.Background
+namespace Alebrije.Background
 {
     /// <summary>
     /// Creates a General Purpose concrete class of <see cref="IBackgroundProcessQueue"/>
@@ -42,15 +43,15 @@ namespace Alebrije.Framework.Background
 
             try
             {
-                _logger.LogDebug("Attempting to queue new work item.");
-                _logger.LogDebug("Queue is allowed for new work item.");
+                _logger.Debug("Attempting to queue new work item.");
+                _logger.Debug("Queue is allowed for new work item.");
                 _workItems.Enqueue(workItem);
                 _signal.Release();
                 return true;
             }
             catch (Exception e)
             {
-                _logger.LogWarning(e, "An attempt to enqueue a work Item failed.");
+                _logger.Warning("An attempt to enqueue a work Item failed.", e);
             }
 
             return false;
@@ -58,9 +59,9 @@ namespace Alebrije.Framework.Background
 
         public async Task<Func<CancellationToken, Task>> DequeueProcessAsync(CancellationToken cancellationToken)
         {
-            _logger.LogDebug("Waiting for work to process...");
+            _logger.Debug("Waiting for work to process...");
             await _signal.WaitAsync(cancellationToken);
-            _logger.LogDebug("Work received and dequeued.");
+            _logger.Debug("Work received and dequeued.");
             _workItems.TryDequeue(out var workItem);
 
             return workItem;

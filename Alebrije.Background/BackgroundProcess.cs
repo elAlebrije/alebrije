@@ -3,9 +3,10 @@ using System.Threading.Tasks;
 using Alebrije.Abstractions.Background;
 using Alebrije.Abstractions.Enums;
 using Alebrije.Exceptions;
+using Alebrije.Extensions;
 using Microsoft.Extensions.Logging;
 
-namespace Alebrije.Framework.Background
+namespace Alebrije.Background
 {
     public abstract class BackgroundProcess<TEnv, TExec> : IBackgroundProcess<TEnv, TExec>
     {
@@ -76,27 +77,27 @@ namespace Alebrije.Framework.Background
         private Task ExecutionWrapper(string step, ProcessState expected, ProcessState startOn,
             ProcessState finishOn, Action workItem)
         {
-            _logger.LogDebug($"{step} started");
+            _logger.Debug($"{step} started");
             if (CurrentState != expected)
             {
-                _logger.LogWarning($"Cannot continue the {step}: Invalid state {expected} - expected {CurrentState}");
+                _logger.Warning($"Cannot continue the {step}: Invalid state {expected} - expected {CurrentState}");
                 return Task.FromException(new AlebrijeInvalidProcessStateException(CurrentState.ToString()));
             }
 
             try
             {
                 CurrentState = startOn;
-                _logger.LogDebug($"Process state: {CurrentState}");
+                _logger.Debug($"Process state: {CurrentState}");
                 workItem();
                 CurrentState = finishOn;
-                _logger.LogDebug($"Process state: {CurrentState}");
+                _logger.Debug($"Process state: {CurrentState}");
                 return Task.CompletedTask;
             }
             catch (Exception e)
             {
                 //TODO: CurrentState = ProcessState.Dead;
                 Console.WriteLine(e);
-                _logger.LogCritical(exception: e, message: "Fatal Error");
+                _logger.Fatal(exception: e, message: "Fatal Error");
                 return Task.FromException(e);
             }
         }

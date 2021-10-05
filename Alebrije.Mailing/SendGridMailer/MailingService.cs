@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Alebrije.Abstractions.Mailing;
+using Alebrije.Extensions;
 using Microsoft.Extensions.Logging;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -24,7 +25,7 @@ namespace Alebrije.Mailing.SendGridMailer
 
             var msg = MailHelper.CreateSingleEmail(from, to, emailInfo.Subject, emailInfo.PlainText, emailInfo.HtmlContent);
 
-            _logger.LogInformation($"Attempting to send email [{emailInfo.Subject}] to [{_settings.From.EmailAddress}]");
+            _logger.Info($"Attempting to send email [{emailInfo.Subject}] to [{_settings.From.EmailAddress}]");
             await SendMessageAsync(client, msg);
         }
 
@@ -34,7 +35,7 @@ namespace Alebrije.Mailing.SendGridMailer
 
             var templateId = _settings.Options.Templates.SingleOrDefault(x => x.Name.ToString() == emailInfo.TemplateName)?.Key;
 
-            _logger.LogInformation($"Attempting to send email [{emailInfo.TemplateName}] to [{_settings.From.EmailAddress}]");
+            _logger.Info($"Attempting to send email [{emailInfo.TemplateName}] to [{_settings.From.EmailAddress}]");
             var msg = MailHelper.CreateSingleTemplateEmail(from, to, templateId, emailInfo.InputParams);
             await SendMessageAsync(client, msg);
         }
@@ -54,12 +55,12 @@ namespace Alebrije.Mailing.SendGridMailer
 
             if (response.IsSuccessStatusCode)
             {
-                _logger.LogInformation($"Email sent successfully.");
+                _logger.Info($"Email sent successfully.");
             }
             else
             {
-                _logger.LogWarning($"Email was not sent.");
-                _logger.LogWarning(response.Body.ToString());
+                _logger.Warning($"Email was not sent.");
+                _logger.Warning(response.Body.ToString());
             }
         }
     }

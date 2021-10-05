@@ -2,12 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Alebrije.Mailing</PackageId>
+    <Product>Alebrije.Mailing</Product>
+    <Authors>JJ Antonio Franco</Authors>
+    <Company>alebrije.dev</Company>
+    <Description>Mailing Clients implementation</Description>
+    <Copyright>alebrije.dev</Copyright>
+    <PackageProjectUrl>https://www.alebrije.dev</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/elAlebrije/alebrije</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>C#</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Alebrije.Abstractions" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="SendGrid" Version="9.24.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alebrije.Extensions\Alebrije.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Alebrije.DependencyInjection</PackageId>
+    <Product>Alebrije.DependencyInjection</Product>
+    <Authors>JJ Antonio Franco</Authors>
+    <Company>alebrije.dev</Company>
+    <Description>Dependency Injection tools such as IFactory</Description>
+    <Copyright>alebrije.dev</Copyright>
+    <PackageProjectUrl>https://www.alebrije.dev</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/elAlebrije/alebrije</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>C#</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
