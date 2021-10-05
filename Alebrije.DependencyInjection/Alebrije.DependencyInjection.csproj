@@ -13,12 +13,11 @@
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>C#</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Alebrije.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Alebrije.Abstractions" Version="1.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
   </ItemGroup>
 

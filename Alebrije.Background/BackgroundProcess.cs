@@ -95,7 +95,7 @@ namespace Alebrije.Background
             }
             catch (Exception e)
             {
-                //TODO: CurrentState = ProcessState.Dead;
+                CurrentState = ProcessState.Dead;
                 Console.WriteLine(e);
                 _logger.Fatal(exception: e, message: "Fatal Error");
                 return Task.FromException(e);
