@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.DependencyInjection", "Alebrije.DependencyInjection\Alebrije.DependencyInjection.csproj", "{0BD61B92-A4A8-43D5-96F7-64EA2B31452B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.Caching", "Alebrije.Caching\Alebrije.Caching.csproj", "{16AC10EE-AD08-43D7-BF26-83F661EC4A9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.Background", "Alebrije.Background\Alebrije.Background.csproj", "{822E1A8E-411C-4849-B589-E08B72B368BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.Exceptions", "Alebrije.Exceptions\Alebrije.Exceptions.csproj", "{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.Mailing", "Alebrije.Mailing\Alebrije.Mailing.csproj", "{5D476F92-FAD7-444F-982A-2A53359CD51C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD61B92-A4A8-43D5-96F7-64EA2B31452B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD61B92-A4A8-43D5-96F7-64EA2B31452B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD61B92-A4A8-43D5-96F7-64EA2B31452B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD61B92-A4A8-43D5-96F7-64EA2B31452B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16AC10EE-AD08-43D7-BF26-83F661EC4A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16AC10EE-AD08-43D7-BF26-83F661EC4A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16AC10EE-AD08-43D7-BF26-83F661EC4A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16AC10EE-AD08-43D7-BF26-83F661EC4A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{822E1A8E-411C-4849-B589-E08B72B368BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{822E1A8E-411C-4849-B589-E08B72B368BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822E1A8E-411C-4849-B589-E08B72B368BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{822E1A8E-411C-4849-B589-E08B72B368BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D476F92-FAD7-444F-982A-2A53359CD51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D476F92-FAD7-444F-982A-2A53359CD51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D476F92-FAD7-444F-982A-2A53359CD51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D476F92-FAD7-444F-982A-2A53359CD51C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9560DA18-3827-4204-87F4-6AFD13830889}
+	EndGlobalSection
+EndGlobal
