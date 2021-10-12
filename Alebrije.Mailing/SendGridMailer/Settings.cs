@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Alebrije.Abstractions.Mailing;
+using Alebrije.Abstractions.Communication;
 
-namespace Alebrije.Mailing.SendGridMailer
+namespace Alebrije.Communication.SendGridMailer
 {
     public class Settings
     {

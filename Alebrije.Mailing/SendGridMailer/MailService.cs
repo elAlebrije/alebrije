@@ -1,19 +1,19 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Alebrije.Abstractions.Mailing;
+using Alebrije.Abstractions.Communication;
 using Alebrije.Extensions;
 using Microsoft.Extensions.Logging;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
-namespace Alebrije.Mailing.SendGridMailer
+namespace Alebrije.Communication.SendGridMailer
 {
-    public class MailingService : IMailingService
+    public class MailService : IMailingService
     {
-        private readonly ILogger<MailingService> _logger;
+        private readonly ILogger<MailService> _logger;
         private readonly Settings _settings;
 
-        public MailingService(ILogger<MailingService> logger, Settings settings)
+        public MailService(ILogger<MailService> logger, Settings settings)
         {
             _logger = logger;
             _settings = settings;

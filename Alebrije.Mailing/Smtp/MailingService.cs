@@ -1,4 +1,4 @@
-﻿namespace Alebrije.Mailing.Smtp
+﻿namespace Alebrije.Communication.Smtp
 {
     public class MailingService
     {

@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alebrije.Background", "Aleb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alebrije.Exceptions", "Alebrije.Exceptions\Alebrije.Exceptions.csproj", "{682DFAEF-6401-4BB1-B9F6-C414EDB7039A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alebrije.Mailing", "Alebrije.Mailing\Alebrije.Mailing.csproj", "{5D476F92-FAD7-444F-982A-2A53359CD51C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alebrije.Communication", "Alebrije.Mailing\Alebrije.Communication.csproj", "{5D476F92-FAD7-444F-982A-2A53359CD51C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alebrije.Extensions", "Alebrije.Extensions\Alebrije.Extensions.csproj", "{01082361-7B39-48EA-AE5E-195C74B8131C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alebrije.Extensions", "Alebrije.Extensions\Alebrije.Extensions.csproj", "{01082361-7B39-48EA-AE5E-195C74B8131C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandBox", "SandBox\SandBox.csproj", "{92861367-FDB9-4324-92F9-550634662526}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{01082361-7B39-48EA-AE5E-195C74B8131C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01082361-7B39-48EA-AE5E-195C74B8131C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01082361-7B39-48EA-AE5E-195C74B8131C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92861367-FDB9-4324-92F9-550634662526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92861367-FDB9-4324-92F9-550634662526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92861367-FDB9-4324-92F9-550634662526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92861367-FDB9-4324-92F9-550634662526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
