@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
-namespace Alebrije.Communication.SendGridMailer
+namespace Alebrije.Communication.Email.SendGridProvider
 {
     public class MailService : IMailingService
     {

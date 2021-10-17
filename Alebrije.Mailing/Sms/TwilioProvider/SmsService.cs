@@ -6,7 +6,7 @@ using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 
-namespace Alebrije.Communication.Twilio
+namespace Alebrije.Communication.Sms.TwilioProvider
 {
     public class SmsService : ISmsService
     {

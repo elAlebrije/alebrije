@@ -1,4 +1,4 @@
-﻿namespace Alebrije.Communication.Twilio
+﻿namespace Alebrije.Communication.Sms.TwilioProvider
 {
     public class Settings
     {

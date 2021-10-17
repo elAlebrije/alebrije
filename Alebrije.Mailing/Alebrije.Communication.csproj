@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Alebrije.Abstractions" Version="1.0.2" />
+    <PackageReference Include="Alebrije.Abstractions" Version="1.0.3" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="SendGrid" Version="9.24.3" />
     <PackageReference Include="Twilio" Version="5.66.0" />
