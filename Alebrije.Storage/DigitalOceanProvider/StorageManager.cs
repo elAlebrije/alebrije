@@ -32,7 +32,7 @@ namespace Alebrije.Storage.DigitalOceanProvider
             try
             {
                 var extension = file.FileName.Split('.').Last();
-                using var client = new AmazonS3Client(new BasicAWSCredentials(_options.Access, _options.Token));
+                using var client = new AmazonS3Client(new BasicAWSCredentials(_options.Access, _options.Token), config);
                 await using var stream = new MemoryStream();
                 await file.CopyToAsync(stream);
                 var fileTransferUtilityRequest = new TransferUtilityUploadRequest
