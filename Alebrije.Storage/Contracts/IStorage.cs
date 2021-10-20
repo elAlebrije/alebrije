@@ -5,6 +5,6 @@ namespace Alebrije.Storage.Contracts
 {
     public interface IStorage
     {
-        Task<string> Upload(IFormFile file, AssetType asset);
+        Task<string> Upload(IFormFile file, AssetType asset, string subFolder);
     }
 }

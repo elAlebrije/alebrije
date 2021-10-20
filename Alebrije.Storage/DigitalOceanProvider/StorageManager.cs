@@ -23,30 +23,40 @@ namespace Alebrije.Storage.DigitalOceanProvider
             _options = options;
         }
 
-        public async Task<string> Upload(IFormFile file, AssetType asset)
+        public async Task<string> Upload(IFormFile file, AssetType asset, string subFolder)
         {
             var config = new AmazonS3Config
             {
-                ServiceURL = _options.Url
+                ServiceURL = _options.Endpoint,
             };
             try
             {
                 var extension = file.FileName.Split('.').Last();
-                using var client = new AmazonS3Client(new BasicAWSCredentials(_options.Access, _options.Token), config);
+                var credentials = new BasicAWSCredentials(_options.Access, _options.Token);
+                using var client = new AmazonS3Client(credentials, config);
+
+
                 await using var stream = new MemoryStream();
                 await file.CopyToAsync(stream);
+                var bucketName = $"{_options.Bucket.ToLower()}/{asset.ToString().ToLower()}/{subFolder}";
+                var fileName = $"{Guid.NewGuid()}.{extension.ToLower()}";
                 var fileTransferUtilityRequest = new TransferUtilityUploadRequest
                 {
-                    BucketName = _options.Bucket + @"/" + asset,
+                    BucketName = bucketName,
                     InputStream = stream,
                     StorageClass = S3StorageClass.StandardInfrequentAccess,
                     PartSize = 6291456, // 6 MB
-                    Key = $"{Guid.NewGuid()}.{extension}",
+                    Key = fileName,
                     CannedACL = S3CannedACL.PublicRead
                 };
                 var fileTransferUtility = new TransferUtility(client);
                 await fileTransferUtility.UploadAsync(fileTransferUtilityRequest);
-                return $"{fileTransferUtilityRequest.BucketName}/{fileTransferUtilityRequest.Key}";
+
+                var baseUri = new Uri(_options.PublicUrl);
+                var relativePath = $"{asset.ToString().ToLower()}/{subFolder}/{fileName}";
+                var returnUrl = new Uri(baseUri, relativePath);
+
+                return returnUrl.ToString();
             }
             catch (AmazonS3Exception e)
             {
